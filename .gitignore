@@ -1,0 +1,15 @@
+venv/
+whoop_data/
+*.csv
+__pycache__/
+*.pyc
+.DS_Store
+activity_tracker/
+audio-cleaner/
+jayaprakashnarayana/
+timelapse-maker/
+voice_recorder/
+JayaPrakashNarayana-Resume-2026.pdf
+project_rules.md
+resume.txt
+venv_pdf/

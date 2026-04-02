@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whoop Recovery Simulator</title>
+    <!-- Use Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/static/style.css?v=2">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>WHOOP <span>DASHBOARD</span></h1>
+            <p>Predict & Analyze Your True Recovery</p>
+            <div class="upload-container glass" style="display:inline-block; margin-top: 1rem; padding: 1rem 2rem;">
+                <label for="csv-upload" class="upload-btn" style="cursor:pointer; color:var(--whoop-green); font-weight:bold; border: 1px solid var(--whoop-green); border-radius:8px; padding:0.5rem 1rem;">
+                    Upload Data (CSV)
+                </label>
+                <input type="file" id="csv-upload" multiple accept=".csv" style="display:none;">
+                <span id="upload-status" style="margin-left: 1rem; font-size: 0.9rem; color: var(--text-muted);"></span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Left Column: Data & Charts -->
+            <div class="left-col">
+                <div class="card glass filters-card">
+                    <div class="time-filters">
+                        <button class="time-btn" data-days="7">1W</button>
+                        <button class="time-btn active" data-days="30">1M</button>
+                        <button class="time-btn" data-days="180">6M</button>
+                        <button class="time-btn" data-days="365">1Y</button>
+                        <button class="time-btn" data-days="9999">All Time</button>
+                    </div>
+                </div>
+
+                <div class="card chart-card glass">
+                    <h2>Recovery vs Strain</h2>
+                    <canvas id="historyChart"></canvas>
+                </div>
+                
+                <div class="card chart-card glass">
+                    <h2>Sleep Performance vs Sleep Debt</h2>
+                    <canvas id="sleepChart"></canvas>
+                </div>
+
+                <div class="chart-row">
+                    <div class="card chart-card glass" style="flex:1;">
+                        <h2>Asleep Duration & Recovery</h2>
+                        <canvas id="scatterChart"></canvas>
+                    </div>
+                    <div class="card insights-card glass" style="flex:1;">
+                        <h2>Your Top Recovery Drivers</h2>
+                        <ul id="insights-list">
+                            <li>Loading insights...</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Setup / Predictor -->
+            <div class="right-col">
+                <div class="card predict-card glass">
+                    <h2>Recovery Simulator</h2>
+                    <p class="subtitle">Tweak yesterday's habits & sleep to predict tomorrow's recovery.</p>
+                    
+                    <div id="simulator-form">
+                        <!-- Dynamic sliders will populate here -->
+                        <p>Loading inputs...</p>
+                    </div>
+
+                    <div class="prediction-result">
+                        <h3>Predicted Recovery</h3>
+                        <div id="score-display" class="score-circle">--%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/static/app.js?v=2"></script>
+</body>
+</html>
