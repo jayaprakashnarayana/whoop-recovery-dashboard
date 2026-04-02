@@ -11,6 +11,13 @@ It features a custom-built, dark-mode dashboard (HTML/CSS/JS) served dynamically
 
 ![Interactive Simulator Demo](assets/demo.webp)
 
+## Data Export
+To get your data into the simulator, you must first export it from your Whoop app:
+1. Open the Whoop app on your phone.
+2. Navigate to **More** (or settings menu) -> **App Settings** -> **Data Export**.
+3. Generate the export and extract the zip file.
+4. Upload `physiological_cycles.csv`, `sleeps.csv`, and `journal_entries.csv` straight into the web dashboard!
+
 ## Features
 - **Recovery Simulator**: Tweak sliders for sleep duration and toggle daily behaviors (e.g., protein intake, sunlight exposure) to get an instant **Predicted Recovery** score from the ML model on the fly.
 - **Top Recovery Drivers**: Extracts and ranks the most impactful behaviors and metrics from your personalized historical data using Random Forest feature importance.
