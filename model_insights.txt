@@ -1,0 +1,26 @@
+=== WHOOP RECOVERY MODEL RESULTS ===
+Mean Absolute Error   : 17.50 %
+
+=== TOP 15 DRIVERS ===
+1. Sleep performance % - 44.3%
+2. Asleep duration (min) - 12.7%
+3. Prev_Energy_Burned - 9.3%
+4. Sleep debt (min) - 7.0%
+5. Prev_Day_Strain - 6.6%
+6. Sleep need (min) - 5.9%
+7. Sleep consistency % - 5.2%
+8. Consumed protein? - 1.2%
+9. Shared your bed? - 1.0%
+10. Saw direct sunlight upon waking up? - 1.0%
+11. Ate all your meals during daylight hours? - 0.9%
+12. Practiced breathwork? - 0.8%
+13. Saw artificial light upon waking up? - 0.6%
+14. Took prescription sleep medication? - 0.5%
+15. Felt motivated? - 0.5%
+
+=== DIRECTION OF TOP DRIVERS ===
+- Sleep performance % Positively correlates with Recovery (r=0.58)
+- Asleep duration (min) Positively correlates with Recovery (r=0.53)
+- Prev_Energy_Burned Negatively correlates with Recovery (r=-0.04)
+- Sleep debt (min) Negatively correlates with Recovery (r=-0.05)
+- Prev_Day_Strain Positively correlates with Recovery (r=0.08)
