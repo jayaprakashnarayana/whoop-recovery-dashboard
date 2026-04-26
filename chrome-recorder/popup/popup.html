@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Screen Flow</h1>
+      <p class="subtitle">Record Chrome tabs with stereo audio.</p>
+    </div>
+
+    <div class="content">
+      <div id="status" class="status-indicator">Ready to record</div>
+      
+      <div class="controls">
+        <button id="startBtn" class="btn primary-btn">
+          <span class="icon">🔴</span> Start
+        </button>
+        <button id="pauseBtn" class="btn secondary-btn" disabled>
+          <span class="icon" id="pauseIcon">⏸️</span> <span id="pauseText">Pause</span>
+        </button>
+        <button id="stopBtn" class="btn secondary-btn" disabled>
+          <span class="icon">⏹️</span> Stop
+        </button>
+      </div>
+      
+      <div id="transcriptContainer" style="display: none; margin-top: 15px;">
+        <h3 style="font-size: 14px; margin-bottom: 5px; color: #a855f7;">✨ AI Transcript</h3>
+        <textarea id="transcriptText" rows="6" style="width: 100%; border-radius: 8px; padding: 8px; background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1); color: white; resize: vertical;" readonly></textarea>
+        <button id="saveTranscriptBtn" class="btn secondary-btn" style="margin-top: 8px; font-size: 12px; padding: 6px 12px;">💾 Save .txt</button>
+      </div>
+
+      <div class="info-box">
+        Ensure you select <strong>"Share Audio"</strong> when picking the Chrome tab!
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

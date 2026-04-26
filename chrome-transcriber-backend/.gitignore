@@ -1,0 +1,5 @@
+__pycache__/
+*.webm
+*.mp4
+recordings/
+.DS_Store
